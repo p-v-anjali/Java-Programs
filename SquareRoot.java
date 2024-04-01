@@ -1,4 +1,4 @@
-//     WAP to implement a function using call by reference to find the square root of a given number.
+// WAP to implement a function using call by reference to find the square root of a given number.
 
 import java.io.*;
 import java.util.*;
