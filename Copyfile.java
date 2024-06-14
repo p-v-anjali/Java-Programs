@@ -23,15 +23,14 @@ public class Copyfile {
             while ((n = fin1.read()) != -1) {
                 destinationStream.write(n);
             }
-          
+            destinationStream.write("\n".getBytes());
 
             while ((n = fin2.read()) != -1) {
                 destinationStream.write(n);
             }
             
 
-
-
+            
             System.out.println("Files merged successfully.");
             
             fin1.close();
@@ -41,5 +40,5 @@ public class Copyfile {
         catch (IOException e) {
             System.out.println("Error: " + e.getMessage());
         } 
-    }  
+        
 }
