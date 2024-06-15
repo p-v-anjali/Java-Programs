@@ -11,9 +11,16 @@ public class FileMergeAlternate {
              BufferedWriter writer = new BufferedWriter(new FileWriter(outputFileName))) {
 
             String line1;
-            String line2 = null;
+            String line2;
             
-            while ((line1 = reader1.readLine()) != null || (line2 = reader2.readLine()) != null) {
+            while (true) {
+                line1 = reader1.readLine();
+                line2 = reader2.readLine();
+                
+                if (line1 == null && line2 == null) {
+                    break;
+                }
+                
                 if (line1 != null) {
                     writer.write(line1);
                     writer.newLine();
